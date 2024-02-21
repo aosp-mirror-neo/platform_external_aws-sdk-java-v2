@@ -1,0 +1,11 @@
+java_library_host {
+    name: "awssdk-third-party-jackson-core",
+    static_libs: ["jackson-core"],
+    jarjar_rules: "jarjar-rules.txt",
+    // TODO(b/328041351)
+    // target: {
+    //     windows: {
+    //         enabled: true,
+    //     },
+    // },
+}

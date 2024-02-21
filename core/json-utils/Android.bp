@@ -1,0 +1,15 @@
+java_library_host {
+    name: "awssdk-json-utils",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: [
+        "awssdk-utils",
+        "awssdk-third-party-jackson-core",
+    ],
+    // TODO(b/328041351)
+    // target: {
+    //     windows: {
+    //         enabled: true,
+    //     },
+    // },
+}

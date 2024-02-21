@@ -1,0 +1,11 @@
+java_library_host {
+    name: "awssdk-identity-spi",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: ["awssdk-utils"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

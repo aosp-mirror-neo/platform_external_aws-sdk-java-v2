@@ -1,0 +1,17 @@
+java_library_host {
+    name: "awssdk-utils",
+    srcs: ["src/main/**/*.java"],
+    libs: [
+        "slf4j-api",
+        "awssdk-annotations",
+    ],
+    static_libs: [
+    	// TODO(b/326486994): remove this target once reactive-streams-jvm source is imported
+        "reactive-streams-1.0.2",
+    ],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

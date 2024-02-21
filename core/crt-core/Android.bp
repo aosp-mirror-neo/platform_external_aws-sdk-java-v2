@@ -1,0 +1,14 @@
+java_library_host {
+    name: "awssdk-crt-core",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: [
+        "awssdk-utils",
+        "aws-crt-java",
+    ],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

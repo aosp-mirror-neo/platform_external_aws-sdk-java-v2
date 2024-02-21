@@ -1,0 +1,11 @@
+java_library_host {
+    name: "awssdk-http-client-spi",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: ["awssdk-metrics-spi"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

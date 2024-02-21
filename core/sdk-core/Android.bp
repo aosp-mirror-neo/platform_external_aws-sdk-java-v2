@@ -1,0 +1,29 @@
+java_library_host {
+    name: "awssdk-sdk-core",
+    srcs: [
+        "src/main/**/*.java",
+        "target/generated-sources/**/*.java",
+    ],
+    libs: [
+        "slf4j-api",
+        "awssdk-annotations",
+    ],
+    static_libs: [
+        "awssdk-http-client-spi",
+        "awssdk-metrics-spi",
+        "awssdk-endpoints-spi",
+        "awssdk-http-auth-spi",
+        "awssdk-http-auth-aws",
+        "awssdk-checksums-spi",
+        "awssdk-checksums",
+        "awssdk-identity-spi",
+        "awssdk-utils",
+        "awssdk-profiles",
+    ],
+    // TODO(b/328041351)
+    // target: {
+    //     windows: {
+    //         enabled: true,
+    //     },
+    // },
+}

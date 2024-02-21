@@ -1,0 +1,23 @@
+java_library_host {
+    name: "awssdk-http-auth-aws",
+    srcs: ["src/main/**/*.java"],
+    libs: [
+        "slf4j-api",
+        "awssdk-annotations",
+        "aws-crt-java",
+        "aws-eventstream-java",
+    ],
+    static_libs: [
+        "awssdk-utils",
+        "awssdk-identity-spi",
+        "awssdk-http-client-spi",
+        "awssdk-http-auth-spi",
+        "awssdk-checksums-spi",
+        "awssdk-checksums",
+    ],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

@@ -1,0 +1,22 @@
+java_library_host {
+    name: "awssdk-kms",
+    srcs: [
+        "src/main/**/*.java",
+        "target/generated-sources/**/*.java",
+    ],
+    libs: [
+        "slf4j-api",
+        "awssdk-annotations"
+    ],
+    static_libs: [
+        "awssdk-aws-json-protocol",
+        "awssdk-protocol-core",
+        "awssdk-http-auth-aws",
+    ],
+    // TODO(b/328041351)
+    // target: {
+    //     windows: {
+    //         enabled: true,
+    //     },
+    // },
+}
