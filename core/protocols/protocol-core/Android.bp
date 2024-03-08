@@ -1,0 +1,12 @@
+java_library_host {
+    name: "awssdk-protocol-core",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: ["awssdk-sdk-core"],
+    // TODO(b/328041351)
+    // target: {
+    //     windows: {
+    //         enabled: true,
+    //     },
+    // },
+}

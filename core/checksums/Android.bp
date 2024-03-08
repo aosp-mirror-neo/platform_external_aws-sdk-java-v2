@@ -1,0 +1,11 @@
+java_library_host {
+    name: "awssdk-checksums",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: ["awssdk-checksums-spi"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

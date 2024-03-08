@@ -1,0 +1,22 @@
+java_library_host {
+    name: "awssdk-regions",
+    srcs: [
+        "src/main/**/*.java",
+        "target/generated-sources/**/*.java",
+    ],
+    libs: [
+        "slf4j-api",
+        "awssdk-annotations",
+    ],
+    static_libs: [
+        "awssdk-sdk-core",
+        "awssdk-profiles",
+        "awssdk-json-utils",
+    ],
+    // TODO(b/328041351)
+    // target: {
+    //     windows: {
+    //         enabled: true,
+    //     },
+    // },
+}

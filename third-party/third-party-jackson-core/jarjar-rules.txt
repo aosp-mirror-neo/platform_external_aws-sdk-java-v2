@@ -1,0 +1,1 @@
+rule com.fasterxml.jackson.core.** software.amazon.awssdk.thirdparty.jackson.core.@1

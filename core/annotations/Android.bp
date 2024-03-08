@@ -1,0 +1,9 @@
+java_library_host {
+    name: "awssdk-annotations",
+    srcs: ["src/main/**/*.java"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

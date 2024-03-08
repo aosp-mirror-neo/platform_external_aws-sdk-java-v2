@@ -1,0 +1,14 @@
+java_library_host {
+    name: "awssdk-profiles",
+    srcs: ["src/main/**/*.java"],
+    libs: [
+        "slf4j-api",
+        "awssdk-annotations",
+    ],
+    static_libs: ["awssdk-utils"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

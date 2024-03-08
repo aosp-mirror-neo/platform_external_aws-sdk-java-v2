@@ -1,0 +1,14 @@
+java_library_host {
+    name: "awssdk-url-connection-client",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    static_libs: [
+        "awssdk-utils",
+        "awssdk-http-client-spi",
+    ],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}

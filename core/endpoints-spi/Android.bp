@@ -1,0 +1,10 @@
+java_library_host {
+    name: "awssdk-endpoints-spi",
+    srcs: ["src/main/**/*.java"],
+    libs: ["awssdk-annotations"],
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+}
