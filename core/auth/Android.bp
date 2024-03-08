@@ -3,7 +3,7 @@ java_library_host {
     srcs: ["src/main/**/*.java"],
     libs: [
         "slf4j-api",
-        "awssdk-annotations"
+        "awssdk-annotations",
     ],
     static_libs: [
         "aws-eventstream-java",
@@ -12,10 +12,9 @@ java_library_host {
         "awssdk-profiles",
         "awssdk-http-auth",
     ],
-    // TODO(b/328041351)
-    // target: {
-    //     windows: {
-    //         enabled: true,
-    //     },
-    // },
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
 }

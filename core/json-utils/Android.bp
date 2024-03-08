@@ -6,10 +6,9 @@ java_library_host {
         "awssdk-utils",
         "awssdk-third-party-jackson-core",
     ],
-    // TODO(b/328041351)
-    // target: {
-    //     windows: {
-    //         enabled: true,
-    //     },
-    // },
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
 }

@@ -11,10 +11,9 @@ java_library_host {
         "awssdk-sdk-core",
         "awssdk-json-utils",
     ],
-    // TODO(b/328041351)
-    // target: {
-    //     windows: {
-    //         enabled: true,
-    //     },
-    // },
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
 }
