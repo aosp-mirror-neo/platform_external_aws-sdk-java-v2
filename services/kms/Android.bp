@@ -2,21 +2,23 @@ java_library_host {
     name: "awssdk-kms",
     srcs: [
         "src/main/**/*.java",
+        // These files were generated locally with maven: `mvn generate-sources`,
+        // and then checked in with `git add -f`, so othat soong can build this
+        // target from source.
         "target/generated-sources/**/*.java",
     ],
     libs: [
         "slf4j-api",
-        "awssdk-annotations"
+        "awssdk-annotations",
     ],
     static_libs: [
         "awssdk-aws-json-protocol",
         "awssdk-protocol-core",
         "awssdk-http-auth-aws",
     ],
-    // TODO(b/328041351)
-    // target: {
-    //     windows: {
-    //         enabled: true,
-    //     },
-    // },
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
 }
