@@ -23,6 +23,11 @@ java_library_host {
         "awssdk-utils",
         "awssdk-profiles",
     ],
+    errorprone: {
+        javacflags: [
+            "-Xep:DoubleBraceInitialization:WARN",
+        ],
+    },
     target: {
         windows: {
             enabled: true,
